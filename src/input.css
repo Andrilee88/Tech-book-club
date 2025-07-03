@@ -1,0 +1,108 @@
+
+@font-face {
+    font-family: 'InterItalic';
+    font-style: italic;
+    src: url("/assets/fonts/inter/Inter-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'InterNormal';
+    font-style: normal;
+    src: url("/assets/fonts/inter/Inter-VariableFont_opsz\,wght.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Martian';
+    src: url("/assets/fonts/martian-mono/MartianMono-VariableFont_wdth\,wght.ttf") format('truetype');
+}
+
+@import "tailwindcss";
+
+@theme {
+    --font-Inter-Italic: "Inter-Italic", sans-serif;
+    --font-Martian: "Martian", sans-serif;
+    --font-Inter-Normal: "Inter-Normal", sans-serif;
+    --color-light-salmon-50: #FFF5EF;
+    --color-light-salmon-100: #FFE2D1;
+    --color-light-salmon-500: #FEA36F;
+    --color-neutral-7700: #385159;
+    --color-neutral-9900: #062630;
+    --color-neutral-2200: #E6E1DF;
+    --color-neutral-1100: #FAF5F3;
+    --color-pale: #9CC9DA;
+    --text-38: 2.375rem;
+    --tracking-1: 0.5px;
+    --tracking-2: 2px;
+    --tracking-3: 1px;
+    --text-20: 1.25rem;
+    --text-34: 2.125rem;
+    --text-38: 2.375rem;
+    --text-50: 3.125rem;
+    --text-62: 3.875rem;
+    --container-8xl: 90rem;
+}
+
+@layer utilities {
+    .bg-custom-pattern {
+        background-image: url('/assets/images/pattern-light-bg.svg');
+        background-size: cover;
+        background-position: center;
+    }
+    .bg-custom-pattern-dark {
+        background-image: url('/assets/images/pattern-dark-bg.svg')
+    }
+}
+
+@layer components {
+    .tp {
+        @apply font-Martian font-semibold text-2xl -tracking-3 leading-[1.1]
+    }
+
+    .tp-1 {
+        @apply font-Martian font-bold text-62 -tracking-2 leading-[1.2]
+    }
+
+    .tp-1-mobile {
+        @apply font-Martian font-bold text-38 -tracking-2 leading-[1.2]
+    }
+
+    .tp-2 {
+        @apply font-Martian font-semibold text-50 -tracking-2 leading-[1.3]
+    }
+
+    .tp-2-mobile {
+        @apply font-Martian font-semibold text-34 -tracking-2 leading-[1.3]
+    }
+
+    .tp-3 {
+        @apply font-Martian font-semibold text-34 -tracking-3 leading-[1.3]
+    }
+
+    .tp-3-mobile {
+        @apply font-Martian font-semibold text-2xl -tracking-3 leading-[1.1]
+    }
+
+    .tp-4 {
+        @apply font-Martian text-2xl -tracking-3 leading-[1.2]
+    }
+
+    .tp-5 {
+        @apply font-Inter-Normal text-xl -tracking-1 leading-[1.4]
+    }
+
+    .tp-5-semibold {
+        @apply font-Inter-Normal font-semibold text-2xl -tracking-1 leading-[1.4]
+    }
+
+    .tp-6 {
+        @apply font-Martian font-semibold text-lg -tracking-3 leading-[1.3]
+    }
+
+    .tp-6-mobile {
+        @apply font-Martian font-semibold text-base -tracking-3 leading-[1.3]
+    }
+
+    .tp-7 {
+        @apply font-Martian font-normal text-sm -tracking-3 leading-[1.2]
+    }
+}
