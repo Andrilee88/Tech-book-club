@@ -1,1 +1,1 @@
-Proect Practice from FrontMentor
+Project Practice from FrontMentor
